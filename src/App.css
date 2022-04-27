@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=PT+Sans+Narrow:wght@400;700&family=Poppins:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ffffff;
+  /* background-color: #f2f2f2; */
+  /* background-color: #000; */
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
+.section__margin{
+  margin: 4rem 5rem;
+}
+.section__padding{
+  padding: 4rem 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width:980px) {
+  .section__margin{
+    margin: 3rem 4rem;
+  }
+  .section__padding{
+    padding: 2rem;
+  }
+}
+@media screen and (max-width:768px) {
+  .section__margin{
+    margin: 3rem;
+  }
+  .section__padding{
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width:400px) {
+  .section__margin{
+    margin: 1rem;
+   
+  }
+  .section__padding{
+    padding: 1rem;
+  }
+}
+.animated-text {
+  background-image: -webkit-linear-gradient(#3f1f1f 50%, black 50%);
+  background-size: 20px 50px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: stripes linear 3s infinite;
+}
+.animated-text-small {
+  background-image: -webkit-linear-gradient(#3f1f1f 50%, black 50%);
+  background-size: 20px 50px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: stripes_sm linear 3s infinite;
+}
+.animated-text-small_white {
+  background-image: -webkit-linear-gradient(#3f1f1f 50%, #fff 50%);
+  background-size: 20px 50px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: stripes_sm linear 3s infinite;
+}
+.swirl-in-fwd {
+	-webkit-animation: swirl-in-fwd 0.3s ease-out both;
+	        animation: swirl-in-fwd 0.3s ease-out both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ @-webkit-keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@keyframes stripes {
+  100% {
+    background-position: 0 -200px;
   }
 }
+@keyframes stripes_sm {
+  100% {
+    background-position: 0 -150px;
+  }
+}
+
+@-webkit-keyframes kenburns-right {
+  0% {
+    -webkit-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 50%;
+            transform-origin: 84% 50%;
+  }
+  50% {
+    -webkit-transform: scale(1.25) translateX(20px);
+            transform: scale(1.25) translateX(20px);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 50%;
+            transform-origin: 84% 50%;
+  }
+}
+@keyframes kenburns-right {
+  0% {
+    -webkit-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 50%;
+            transform-origin: 84% 50%;
+  }
+  50% {
+    -webkit-transform: scale(1.25) translateX(20px);
+            transform: scale(1.25) translateX(20px);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 50%;
+            transform-origin: 84% 50%;
+  }
+}
+
+

@@ -1,0 +1,32 @@
+.portfolio__about-links a{
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    color: #5c635c;
+    cursor: pointer;
+}
+.portfolio__about-links a::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width:30px;
+    height: 2px;
+    background: #4b544b;
+    transition: all 0.2s ease-in-out;
+}
+.portfolio__about-links .active{
+    color: #6b3030;
+}
+.portfolio__about-links .active::before{
+    width:100%;
+    background: #6b3030;
+}
+
+.portfolio__about-links__info::-webkit-scrollbar {
+    display: none;
+  }
+ .portfolio__about-links__info {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
